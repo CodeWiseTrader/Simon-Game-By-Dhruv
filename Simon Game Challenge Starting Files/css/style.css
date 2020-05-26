@@ -1,0 +1,615 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  color: #40514E;
+  /* background-color: #E4F9F5; */
+  /* overflow: hidden; */
+}
+
+/* centering elements ::::::: 2 methods ::::::: text-align &&&&&&&& margin :  0 auto 0 auto */
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 2px;
+  animation-name: scrol;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes scrol {
+  0% {
+    background: red;
+  }
+
+  10% {
+    background: orange;
+  }
+
+  20% {
+    background: pink;
+  }
+
+  30% {
+    background: crimson;
+  }
+
+  40% {
+    background: cyan;
+  }
+
+  50% {
+    background: blue;
+  }
+
+  60% {
+    background: blueviolet;
+  }
+
+  70% {
+    background: yellow;
+  }
+
+  80% {
+    background: green;
+  }
+
+  90% {
+    background: sienna;
+  }
+
+  100% {
+    background: fuchsia;
+  }
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
+
+
+
+/* position ::::: static; : ---- by default */
+/* position ::::: relative; : ---- left: 30px; ------- as you want to ./// can use top, left, right, bottom ////
+    ===== by using relative property and give it margin of top:50px; it goes down upon the down element // it doesn't effect the layout of any other element on screen  */
+/* ? easiest one ? position ::::: absolute; : ---- it makes the element moveabel to entire page making page work as a div.. if you pass right:20px; by it gives margin from right part of your browser .. not as relative or other elements */
+/* position ::::: fixed; : if its used /// the thing will always stays on the place when if are scrolling /////// mostly used in sidebar and navbar */
+
+/* if we set the body font-size: 2em & h1 font-size: 5em....it is inherited size of h1 ... body is the parent element of h1 ..though it outputs the h1 font-size to 2em + 5em === 7em ...///
+it happens only with the" % "and" em "size ..... to prevent happen this ... use" px "size allover the website.  */
+
+h1 {
+  color: #66BFBF;
+  /*  100% in font-size is equal to 16px,,  if we want 90px we have to do 90px/16 == use 562.5% */
+  font-size: 5.625rem;
+  /* always use this >>> rem " means root em .. that means ignore all the parent settings */
+  /* *5.625em is as same as displayed on the calculator answer panel doing 90px/16 == 5.625 */
+  /* ? 16px == 100% == 1em ? */
+  /* can also use all of this in anywhere px usable */
+  margin: 100px auto 0 auto;
+  /* * clockwise :: top right bottom left */
+  /* 2 shorthand margin: 0 auto;     ------ top&bottom right&left */
+  /*3 shorthand margin: 0 auto 0;     ------ top right&left bottom*/
+  line-height: 1;
+  font-family: 'Sacramento', cursive;
+  font-weight: bold;
+}
+
+h2 {
+  color: #66BFBF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.middle-container {
+  margin: 100px 0;
+
+}
+
+h3 {
+  color: #11999E;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.top-container {
+  background-color: #e0ebe8;
+  /*  */
+  position: relative;
+  padding-top: 100px;
+
+}
+
+.skill-row {
+  width: 50%;
+  margin: 100px auto 100px auto;
+  text-align: left;
+  line-height: 2;
+}
+
+.css-img {
+  width: 25%;
+  float: left;
+  margin: auto 30px auto 0;
+}
+
+.js-img {
+  width: 25%;
+  float: right;
+  /* only use float when its really really necessary... don't use it for positioning... use only if you want to wrapping text something around */
+  margin: auto 0 auto 30px;
+}
+
+/* .css-skill-description {
+  clear: left;
+  ? clear is anti-float ?
+}
+
+.js-skill-description {
+  clear: right;
+} */
+
+.css-skill-description {
+  width: auto;
+}
+
+.js-skill-description {
+  width: auto;
+}
+
+hr {
+  border-style: none;
+  border-top-style: dotted;
+  border-color: #EAF6F6;
+  border-width: 10px;
+  width: 4%;
+  margin: 100px auto;
+}
+
+.top-cloud {
+  position: absolute;
+  right: 300px;
+  top: 40px;
+}
+
+.bottom-cloud {
+  position: absolute;
+  left: 250px;
+  bottom: 300px;
+}
+
+.top-hiker {
+  position: fixed;
+  left: 35px;
+  top: 35px;
+  animation: aaaaa 10s infinite;
+}
+
+@keyframes aaaaa {
+  0% {
+    transform: rotateY(0deg);
+    position: fixed;
+    left: 35px;
+    top: 35px;
+    z-index: 11;
+  }
+
+  33.33% {
+    transform: rotateY(360deg);
+    position: fixed;
+    top: 610px;
+    z-index: 12;
+
+  }
+
+
+}
+
+/* .dvr {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+} */
+
+.contact-me {
+  line-height: 3;
+
+}
+
+a.btn {
+  background-color: #66BFBF;
+  font-size: 20px;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-style: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a.btn:hover {
+  background-color: #0388cb;
+  color: white;
+}
+
+.bottom-container {
+  color: #EAF6F6;
+  background-color: #66BFBF;
+  line-height: 2;
+  position: absolute;
+  width: 100%;
+  margin: 100px auto 0 auto;
+  /* padding: 50px; */
+  text-align: center;
+  border: none;
+  height: 100px;
+  padding: 50px 0 20px;
+}
+
+a {
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  margin-right: 20px;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+a:hover {
+  color: #EAF6F6;
+}
+
+.copyright {
+  color: #EAF6F6;
+  font-size: 0.75rem;
+  padding: 20px 0;
+}
+
+.footer-link {
+  color: #11999E;
+  font-weight: bolder;
+  /* line-height: 2; */
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px 20px;
+}
+
+p {
+  margin: auto;
+  width: 30%;
+  line-height: 2;
+}
+
+.contact-message {
+  margin: 0 auto 20px;
+}
+
+.addd {
+  padding-bottom: 60px;
+}
+
+/* ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, */
+/* <div class="red"></div>
+<div class="blue"></div>
+<div class="violet"></div>
+<div class="yellow"></div>
+<div class="green"></div>
+<div class="green2"></div>
+<div class="black"></div>
+<div class="orange"></div>
+<div class="cyan"></div>
+<div class="pink"></div>
+<div class="pink2"></div>
+<div class="red2"></div> */
+
+/*
+.red {
+
+  height: 100px;
+  width: 100px;
+  background-color: brown;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.blue {
+
+  height: 100px;
+  width: 100px;
+  background-color: darkblue;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+.violet {
+
+  height: 100px;
+  width: 100px;
+  background-color: darkviolet;
+  position: absolute;
+  top: 200px;
+  left: 200px;
+}
+
+.yellow {
+  height: 100px;
+  width: 100px;
+  background-color: yellow;
+  position: absolute;
+  top: 200px;
+  left: 400px;
+}
+
+.green {
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  position: absolute;
+  top: 400px;
+  left: 300px;
+  animation-name: nam;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+
+}
+
+@keyframes nam {
+  0% {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    position: absolute;
+    top: 400px;
+    left: 300px;
+  }
+
+  50% {
+    height: 100px;
+    width: 300px;
+    background-color: greenyellow;
+    position: absolute;
+    top: 400px;
+    left: 100px;
+    border-radius: 20%;
+  }
+}
+
+.green2 {
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  position: absolute;
+  top: 400px;
+  left: 300px;
+  animation-name: names;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes names {
+  0% {
+    background-color: greeen;
+    position: absolute;
+    top: 400px;
+    left: 300px;
+  }
+
+  50% {
+    background-color: greenyellow;
+    position: absolute;
+    top: 400px;
+    left: 300px;
+    height: 100px;
+    width: 300px;
+    border-radius: 20%;
+  }
+}
+
+.black {
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  position: absolute;
+  top: 300px;
+  left: 300px;
+}
+
+.orange {
+  height: 100px;
+  width: 100px;
+  background-color: orange;
+  position: absolute;
+  top: 100px;
+  left: 500px;
+}
+
+.cyan {
+  height: 100px;
+  width: 100px;
+  background-color: cyan;
+  position: absolute;
+  top: 0;
+  left: 600px;
+}
+
+.pink {
+  height: 100px;
+  width: 100px;
+  background-color: pink;
+  position: absolute;
+  top: 200px;
+  left: 300px;
+  animation: aaa 5s linear infinite
+}
+
+@keyframes aaa {
+  0% {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    background-color: pink;
+  }
+
+  16.66% {
+    position: absolute;
+    top: 100px;
+    left: 300px;
+    background-color: pink;
+  }
+
+  33.32% {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    background-color: darkblue;
+  }
+
+  49.98% {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    background-color: darkviolet;
+  }
+
+  66.64% {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    background-color: brown;
+  }
+
+  83.3% {
+    position: absolute;
+    top: 0;
+    left: 300px;
+    background-color: black;
+    border-radius: 50%;
+  }
+
+  100% {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    background-color: pink;
+  }
+
+}
+
+.pink2 {
+  height: 100px;
+  width: 100px;
+  background-color: pink;
+  position: absolute;
+  top: 200px;
+  left: 300px;
+  animation: aa 5s linear infinite;
+}
+
+@keyframes aa {
+  0% {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    background-color: pink;
+  }
+
+  16.66% {
+    position: absolute;
+    top: 100px;
+    left: 300px;
+    background-color: pink;
+  }
+
+  33.32% {
+    position: absolute;
+    top: 100px;
+    left: 400px;
+    background-color: orange;
+  }
+
+  49.98% {
+    position: absolute;
+    top: 0;
+    left: 400px;
+    background-color: yellow;
+  }
+
+  66.64% {
+    position: absolute;
+    top: 0;
+    left: 500px;
+    background-color: cyan;
+  }
+
+  83.3% {
+    position: absolute;
+    top: 0;
+    left: 300px;
+    background-color: green;
+    border-radius: 50%;
+  }
+
+  100% {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    background-color: pink;
+  }
+
+}
+
+.red2 {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  position: absolute;
+  top: 425px;
+  left: 325px;
+  animation: abs 5s linear infinite;
+}
+
+@keyframes abs {
+  0% {
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    position: absolute;
+    top: 425px;
+    left: 325px;
+  }
+
+  50% {
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    position: absolute;
+    top: 425px;
+    left: 325px;
+  }
+}
+*/
